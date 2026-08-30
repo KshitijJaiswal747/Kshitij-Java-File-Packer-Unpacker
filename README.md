@@ -1,9 +1,9 @@
-# Kshitij-Java-File-Packer-Unpacker
+# Kshitij Java-File-Packer-Unpacker
 Java based file packer and unpacker using file handling and byte streams.
 
 A Java desktop utility that packs multiple files from a folder into a single archive file, and unpacks that archive back into the original files.
 
-Features
+## Features
 - Pack all files in a chosen folder into a single archive file
 - Unpack an archive back into the original files
 - Pack multiple files into a single packed file
@@ -12,30 +12,6 @@ Features
 - Simple Java Swing GUI
 - Uses FileInputStream and FileOutputStream
 - Also runnable from the console (each class has its own main())
-
-
-
-## Requirements
-
-- JDK 17 or later
-- Check Java installation using:
-  ```bash
-  java -version
-  javac -version
-
-
-## Archive format
-
-Each file is stored as a fixed 100-byte header followed by the file's raw bytes:
-[100 bytes] "filename filesize" padded with spaces
-[N bytes]   file content (N = filesize from header)
-
-## Known limitations
-Subfolders inside the target folder are skipped, not recursively packed
-File names that are too long may not fit inside the fixed 100-byte header
-Packing and unpacking are performed on the main thread, so the GUI may appear unresponsive during large operations
-The current archive format is intended for this application and does not provide compression or encryption.
-
 
 ## Project Structure
 ```text
@@ -51,6 +27,62 @@ Java-Packer-Unpacker/
 ├── .gitignore
 ├── LICENSE
 └── README.md
+```
+
+## Project Structure
+```text
+Java-Packer-Unpacker/
+│
+├── src/
+│   └── filepacker/
+│       ├── FilePackerFrame.java
+│       ├── Packer.java
+│       ├── Unpacker.java
+│       └── main.java
+│
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+## Requirements
+
+- JDK 17 or later
+- Check Java installation using:
+  ```bash
+  java -version
+  javac -version
+  ```
+
+## Build & run 
+1.Compile:
+```bash
+  javac -d . src\FilePacker\*.java
+```
+2.Run the GUI:
+The GUI provides options for packing and unpacking files.
+```bash
+  java filepacker.main
+```
+
+## Archive format
+
+Each file is stored as a fixed 100-byte header followed by the file's raw bytes:
+```bash
+[100 bytes] "filename filesize" padded with spaces
+[N bytes]   file content (N = filesize from header)
+```
+
+## Known limitations
+
+Subfolders inside the target folder are skipped, not recursively packed
+
+File names that are too long may not fit inside the fixed 100-byte header
+
+Packing and unpacking are performed on the main thread, so the GUI may appear unresponsive during large operations
+
+The current archive format is intended for this application and does not provide compression or encryption.
+
 
 
 
