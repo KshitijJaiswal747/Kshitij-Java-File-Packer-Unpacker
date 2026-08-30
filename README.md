@@ -29,7 +29,8 @@ Features
    
 The GUI provides options for packing and unpacking files.
 
-##Archive format
+
+## Archive format
 
 Each file is stored as a fixed 100-byte header followed by the file's raw bytes:
 [100 bytes] "filename filesize" padded with spaces
