@@ -13,6 +13,8 @@ Features
 - Uses FileInputStream and FileOutputStream
 - Also runnable from the console (each class has its own main())
 
+
+
 ## Requirements
 
 - JDK 17 or later
@@ -21,15 +23,6 @@ Features
   java -version
   javac -version
 
-## Build & run 
-1.Compile:
-2.Run the GUI:
-  ```bash
-  javac -d . src\FilePacker\*.java
-  java filepacker.main
-   
-The GUI provides options for packing and unpacking files.
-'''text
 
 ## Archive format
 
@@ -43,8 +36,8 @@ File names that are too long may not fit inside the fixed 100-byte header
 Packing and unpacking are performed on the main thread, so the GUI may appear unresponsive during large operations
 The current archive format is intended for this application and does not provide compression or encryption.
 
-## Project Structure
 
+## Project Structure
 ```text
 Java-Packer-Unpacker/
 │
@@ -58,4 +51,10 @@ Java-Packer-Unpacker/
 ├── .gitignore
 ├── LICENSE
 └── README.md
+
+
+
+
+   
+
 
