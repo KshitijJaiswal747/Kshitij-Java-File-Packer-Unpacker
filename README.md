@@ -51,3 +51,5 @@ Java-Packer-Unpacker/
 └── README.md
 
 
+##License
+MIT- see LICENSE
