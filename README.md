@@ -23,16 +23,23 @@ Features
 
 ## Build & run 
 1.Compile: 
-   javac -d . src\FilePacker\*.java
+  javac -d . src\FilePacker\*.java
 2.Run the GUI:
    java filepacker.main
+   
 The GUI provides options for packing and unpacking files.
+
+##Archive format
+
+Each file is stored as a fixed 100-byte header followed by the file's raw bytes:
+[100 bytes] "filename filesize" padded with spaces
+[N bytes]   file content (N = filesize from header)
 
 ## Known limitations
 Subfolders inside the target folder are skipped, not recursively packed
 File names that are too long may not fit inside the fixed 100-byte header
 Packing and unpacking are performed on the main thread, so the GUI may appear unresponsive during large operations
-The current archive format is intended for this application and does not provide compression or encryption
+The current archive format is intended for this application and does not provide compression or encryption.
 
 ## Project Structure
 
@@ -50,6 +57,3 @@ Java-Packer-Unpacker/
 ├── LICENSE
 └── README.md
 
-
-##License
-MIT- see LICENSE
