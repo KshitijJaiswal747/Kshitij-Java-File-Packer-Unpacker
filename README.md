@@ -22,13 +22,14 @@ Features
   javac -version
 
 ## Build & run 
-1.Compile: 
-  javac -d . src\FilePacker\*.java
+1.Compile:
 2.Run the GUI:
-   java filepacker.main
+  ```bash
+  javac -d . src\FilePacker\*.java
+  java filepacker.main
    
 The GUI provides options for packing and unpacking files.
-
+'''text
 
 ## Archive format
 
