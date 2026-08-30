@@ -29,22 +29,6 @@ Java-Packer-Unpacker/
 └── README.md
 ```
 
-## Project Structure
-```text
-Java-Packer-Unpacker/
-│
-├── src/
-│   └── filepacker/
-│       ├── FilePackerFrame.java
-│       ├── Packer.java
-│       ├── Unpacker.java
-│       └── main.java
-│
-├── .gitignore
-├── LICENSE
-└── README.md
-```
-
 ## Requirements
 
 - JDK 17 or later
